@@ -39,7 +39,7 @@ services:
       context: ./react-storefront
       dockerfile: ./Dockerfile.dev
     ports:
-      - 3000:3000
+      - 3001:3000
     restart: unless-stopped
     networks:
       - saleor-backend-tier
@@ -75,7 +75,7 @@ services:
       context: ./saleor-dashboard
       dockerfile: ./Dockerfile.dev
     ports:
-      - 9000:9000
+      - 9001:9000
     restart: unless-stopped
     volumes:
       - ./saleor-dashboard/:/app:cached
